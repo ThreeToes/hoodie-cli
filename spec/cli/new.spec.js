@@ -61,7 +61,8 @@ describe('hoodie new <name>', function() {
         plugins: undefined,
         keep: undefined,
         ssh: undefined,
-        verbose: undefined
+        verbose: undefined,
+        gist: undefined
       };
       cli.argv({ _: ['new', 'appname'] });
       expect(hoodie.new.args[0][0]).to.eql(args);
@@ -77,6 +78,7 @@ describe('hoodie new <name>', function() {
         plugins: undefined,
         keep: undefined,
         ssh: undefined,
+        gist: undefined,
         verbose: true
       };
       cli.argv({ _: ['new', 'appname'], verbose: true });
@@ -93,6 +95,7 @@ describe('hoodie new <name>', function() {
         plugins: undefined,
         keep: true,
         ssh: undefined,
+        gist: undefined,
         verbose: true
       };
       cli.argv({ _: ['new', 'appname'], verbose: true, keep: true});
@@ -109,6 +112,7 @@ describe('hoodie new <name>', function() {
         plugins: undefined,
         keep: undefined,
         ssh: undefined,
+        gist: undefined,
         verbose: undefined
       };
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo'] });
@@ -125,6 +129,7 @@ describe('hoodie new <name>', function() {
         plugins: undefined,
         keep: undefined,
         ssh: undefined,
+        gist: undefined,
         verbose: undefined
       };
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo'] });
@@ -141,6 +146,7 @@ describe('hoodie new <name>', function() {
         plugins: undefined,
         keep: undefined,
         ssh: undefined,
+        gist: undefined,
         verbose: undefined
       };
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo#zipper'] });
@@ -157,6 +163,7 @@ describe('hoodie new <name>', function() {
         plugins: undefined,
         keep: undefined,
         ssh: undefined,
+        gist: undefined,
         verbose: undefined
       };
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo'] });
@@ -173,6 +180,7 @@ describe('hoodie new <name>', function() {
         plugins: 'users',
         keep: undefined,
         ssh: undefined,
+        gist: undefined,
         verbose: undefined
       };
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo', 'users'] });
@@ -189,6 +197,7 @@ describe('hoodie new <name>', function() {
         plugins: 'users,shares',
         keep: undefined,
         ssh: undefined,
+        gist: undefined,
         verbose: undefined
       };
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo', 'users,shares'] });
